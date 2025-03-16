@@ -1,6 +1,5 @@
 import { addPlayer, deletePlayer, getAllPlayers, updatePlayer } from '@/api'
 import { PlayerItem } from '@/components/player-item'
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
@@ -55,13 +54,6 @@ export const PlayersSection = () => {
 
   if (isLoading) return <div>Loading...</div>
 
-  let levelRemainder = 0
-
-  if (players) {
-    levelRemainder =
-      players.reduce((acc, player) => acc + player.level, 0) % 2
-  }
-
   return (
     <Card className="rounded-none">
       <CardHeader>
@@ -69,14 +61,6 @@ export const PlayersSection = () => {
       </CardHeader>
       <Separator />
       <CardContent className="flex flex-col gap-4">
-        {levelRemainder != 0 && (
-          <Alert variant="destructive">
-            <AlertTitle>Error</AlertTitle>
-            <AlertDescription>
-              Players with existing level cannot be divided equally.
-            </AlertDescription>
-          </Alert>
-        )}
         {players?.map((player, index) => (
           <PlayerItem
             key={player.id}
