@@ -64,7 +64,7 @@ export default function TeamGeneratePage() {
         <Card className="rounded-none mt-4">
           <CardContent className="grid grid-cols-2 gap-16 items-center">
             {match?.teamsWithPlayers.map((teamWithPlayers) => (
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4" key={teamWithPlayers.id}>
                 <div className="flex items-center gap-1">
                   <h2 className="font-bold text-2xl">
                     Team {teamWithPlayers.name}
@@ -75,7 +75,11 @@ export default function TeamGeneratePage() {
                 </div>
 
                 {teamWithPlayers.players.map((player, index) => (
-                  <PlayerItemMin player={player} index={index} />
+                  <PlayerItemMin
+                    key={player.id}
+                    player={player}
+                    index={index}
+                  />
                 ))}
 
                 <div className="size-10 flex ml-auto">

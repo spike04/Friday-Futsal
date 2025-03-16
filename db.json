@@ -1,36 +1,5 @@
 {
-  "players": [
-    {
-      "id": "273fa1f8-1fad-4562-b143-a8bfffa9a621",
-      "name": "Rubin Bajracharya",
-      "level": 3
-    },
-    {
-      "id": "75dc9211-db61-4c77-93b5-b1f3e3b8f419",
-      "name": "Abiral Sthapit",
-      "level": 3
-    },
-    {
-      "id": "5040a139-74cc-42c2-b62f-b024dd4c9482",
-      "name": "Rupak Rai",
-      "level": 4
-    },
-    {
-      "id": "695d8a84-1217-4b58-8bc4-785115b1bb99",
-      "name": "Pradeep Lama",
-      "level": 4
-    },
-    {
-      "id": "b46e3f3a-4d23-440f-b524-14bfa2db7b35",
-      "name": "Czan Regmi",
-      "level": 2
-    },
-    {
-      "id": "12080075-0e52-404f-8c57-4f81c9c73a26",
-      "name": "",
-      "level": 0
-    }
-  ],
+  "players": [],
   "teams": [],
   "matches": []
 }
